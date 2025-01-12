@@ -1,0 +1,55 @@
+<TrackerScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: dp(10)
+
+        BoxLayout:
+            size_hint_y: 0.05
+
+        BoxLayout:
+            orientation: "vertical"
+            spacing: dp(20)
+            size_hint_y: 0.80
+
+            Label:
+                text: "I haven't complained for"
+                font_name: "fonts/PlayfairDisplay.ttf"
+                font_size: dp(40)
+                color: (0, 0, 0, 1)
+                halign: "center"
+                text_size: self.width - 0.2 * self.width, None
+                size_hint_y: 1/3
+                color: (0.173, 0.243, 0.224, 1)
+
+            Label:
+                id: counter
+                text: "0"
+                font_name: "fonts/PlayfairDisplay.ttf"
+                font_size: dp(150)
+                color: (0, 0, 0, 1)
+                size_hint_y: 1/3
+                color: (0.173, 0.243, 0.224, 1)
+
+            Label:
+                id: unit
+                text: "days"
+                font_name: "fonts/PlayfairDisplay.ttf"
+                font_size: dp(40)
+                color: (0, 0, 0, 1)
+                size_hint_y: 1/3
+                color: (0.173, 0.243, 0.224, 1)
+
+            BoxLayout:
+                size_hint_y: 0.15
+                orientation: "vertical"
+                padding: [20, 20, 20, 20]
+
+                Button:
+                    text: "Reset"
+                    font_name: "fonts/PlayfairDisplay.ttf"
+                    font_size: dp(18)
+                    background_normal: ''
+                    background_color: (0.937, 0.973, 0.957, 1)
+                    color: (0, 0, 0, 1)
+                    on_press: root.reset_time()
+                    color: (0.173, 0.243, 0.224, 1)
